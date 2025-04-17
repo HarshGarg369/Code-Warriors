@@ -4,74 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leftover Food Redistribution Network</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            padding: 30px;
-            text-align: center;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .user-type {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .user-type button {
-            padding: 12px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .user-type button:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <title>FoodShare - Reduce Food Waste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 <body>
-    <div class="container">
-        <h1>Leftover Food Redistribution Network</h1>
-        <div class="user-type">
-            <button onclick="openAuthPage('donor')">Donor Registration/Login</button>
-            <button onclick="openAuthPage('ngo')">NGO Registration/Login</button>
-            <button onclick="openAuthPage('volunteer')">Volunteer Registration/Login</button>
-        </div>
-    </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FoodShare</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="donate.html">Donate Food</a></li>
+                <li><a href="receive.html">Receive Food</a></li>
+                <li><a href="food-list.html">Food List</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    <script>
-        function openAuthPage(userType) {
-            // Store user type in localStorage to persist across pages
-            localStorage.setItem('userType', userType);
-            
-            // Redirect to authentication page (we'll create this next)
-            window.location.href = 'auth.html';
-        }
-    </script>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Reduce Food Waste, Feed the Community</h1>
+                <p>Connect food donors with those in need through our simple platform.</p>
+                <div class="cta-buttons">
+                    <a href="donate.html" class="btn btn-primary">Donate Food</a>
+                    <a href="receive.html" class="btn btn-secondary">Receive Food</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🍲</div>
+                <h3>Share Your Excess</h3>
+                <p>Donate your extra food instead of throwing it away.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Help Others</h3>
+                <p>Support local communities and reduce hunger.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">♻️</div>
+                <h3>Reduce Waste</h3>
+                <p>Help the environment by minimizing food waste.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Register Your Food</h3>
+                    <p>Fill out a simple form with details about your food donation or request.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Make Connections</h3>
+                    <p>Browse the food list to find or provide what's needed.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Complete the Exchange</h3>
+                    <p>Connect directly and arrange for food pickup or delivery.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FoodShare - Reducing Food Waste Together</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-

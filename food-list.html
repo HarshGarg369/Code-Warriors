@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food List - FoodShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FoodShare</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="donate.html">Donate Food</a></li>
+                <li><a href="receive.html">Receive Food</a></li>
+                <li><a href="food-list.html" class="active">Food List</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="food-list-section">
+            <h1>Available Food & Requests</h1>
+            
+            <div class="list-filters">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="donations">Donations</button>
+                    <button class="filter-btn" data-filter="requests">Requests</button>
+                </div>
+                <input type="text" id="searchBar" placeholder="Search by location or food type...">
+            </div>
+            
+            <div class="list-container">
+                <div id="donationsList" class="food-items-list">
+                    <h2>Donations</h2>
+                    <div class="food-items" id="donationsContainer">
+                        <!-- Donation items will be added here via JavaScript -->
+                        <div class="no-items-message" id="noDonations">No donations available at the moment</div>
+                    </div>
+                </div>
+                
+                <div id="requestsList" class="food-items-list">
+                    <h2>Requests</h2>
+                    <div class="food-items" id="requestsContainer">
+                        <!-- Request items will be added here via JavaScript -->
+                        <div class="no-items-message" id="noRequests">No food requests at the moment</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FoodShare - Reducing Food Waste Together</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

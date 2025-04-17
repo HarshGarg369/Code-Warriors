@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receive Food - FoodShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FoodShare</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="donate.html">Donate Food</a></li>
+                <li><a href="receive.html" class="active">Receive Food</a></li>
+                <li><a href="food-list.html">Food List</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h1>Request Food</h1>
+            <p class="form-intro">Tell us what you need and we'll help connect you with donors</p>
+            
+            <form id="receiveForm" class="food-form">
+                <div class="form-group">
+                    <label for="name">Your Name or Organization</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Your Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="foodType">Type of Food Needed</label>
+                    <input type="text" id="foodType" name="foodType" required placeholder="e.g., Any, Fresh produce, Canned goods, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity Needed</label>
+                    <input type="text" id="quantity" name="quantity" required placeholder="e.g., 5 kg, 10 meals, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="urgency">Urgency Level</label>
+                    <select id="urgency" name="urgency">
+                        <option value="low">Low - Within a week</option>
+                        <option value="medium">Medium - Within 2-3 days</option>
+                        <option value="high">High - Need today</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+            
+            <div id="thankYouMessage" class="thank-you-message hidden">
+                <h2>Request Submitted</h2>
+                <p>Your food request has been recorded. Check the Food List regularly to see available donations.</p>
+                <div class="after-submit-buttons">
+                    <button class="btn btn-secondary" onclick="location.href='food-list.html'">View Food List</button>
+                    <button class="btn btn-outline" onclick="resetForm('receiveForm', 'thankYouMessage')">Make Another Request</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FoodShare - Reducing Food Waste Together</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
