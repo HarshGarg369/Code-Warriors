@@ -1,4 +1,3 @@
-
 // Mobile navigation toggle
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const donateForm = document.getElementById('donateForm');
     const receiveForm = document.getElementById('receiveForm');
     
-    // Handle donate form submission
+    // Update donate form submission
     if (donateForm) {
         donateForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -30,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 contact: document.getElementById('contact').value,
                 expiry: document.getElementById('expiry').value,
                 notes: document.getElementById('notes').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
                 date: new Date().toISOString(),
                 id: Date.now().toString()
             };
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Handle receive form submission
+    // Update receive form submission
     if (receiveForm) {
         receiveForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -58,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 contact: document.getElementById('contact').value,
                 urgency: document.getElementById('urgency').value,
                 notes: document.getElementById('notes').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
                 date: new Date().toISOString(),
                 id: Date.now().toString()
             };
@@ -186,6 +189,14 @@ function createFoodItemElement(item) {
             <p>${item.notes}</p>
         </div>
         ` : ''}
+        <div class="detail-item">
+            <span class="detail-label">Email</span>
+            <span>${item.email}</span>
+        </div>
+        <div class="detail-item">
+            <span class="detail-label">Phone</span>
+            <span>${item.phone}</span>
+        </div>
         <div class="food-item-actions">
             <a href="tel:${item.contact}" class="btn btn-outline">Contact</a>
         </div>
